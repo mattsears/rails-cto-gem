@@ -1,0 +1,28 @@
+---
+# .reek.yml — installed by rails-cto
+# Rails-friendly Reek configuration compatible with Reek 6.5+.
+
+detectors:
+  IrresponsibleModule:
+    enabled: false
+  InstanceVariableAssumption:
+    enabled: false
+  TooManyStatements:
+    max_statements: 10
+  LongParameterList:
+    max_params: 4
+  TooManyInstanceVariables:
+    max_instance_variables: 6
+  TooManyMethods:
+    max_methods: 20
+  UncommunicativeMethodName:
+    accept:
+      - e
+      - t
+      - q
+      - x
+      - y
+
+exclude_paths:
+  - test
+  - db/migrate

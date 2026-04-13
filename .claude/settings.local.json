@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/rails-cto-smoke/**)",
+      "Bash(rm .reek.yml)",
+      "Bash(echo \"# local hack\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(gem list:*)",
+      "Bash(mkdir -p test/models)",
+      "Bash(bundle exec:*)",
+      "Bash(*)"
+    ]
+  }
+}

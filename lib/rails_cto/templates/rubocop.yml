@@ -1,0 +1,67 @@
+---
+# .rubocop.yml — installed by rails-cto
+# https://github.com/mattsears/rails-cto-gem
+
+require:
+  - rubocop-rails
+  - rubocop-minitest
+  - rails-cto
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+  SuggestExtensions: false
+  Exclude:
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "db/migrate/**/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - "tmp/**/*"
+    - "log/**/*"
+    - "coverage/**/*"
+    - "public/**/*"
+    - "config/boot.rb"
+    - "config/environment.rb"
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Metrics/MethodLength:
+  Max: 15
+  Exclude:
+    - "test/**/*"
+
+Metrics/ClassLength:
+  Max: 200
+  Exclude:
+    - "test/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - "test/**/*"
+    - "config/routes.rb"
+    - "config/environments/*.rb"
+    - "Rakefile"
+    - "lib/tasks/**/*.rake"
+
+Metrics/AbcSize:
+  Max: 20
+
+Rails:
+  Enabled: true
+
+Minitest:
+  Enabled: true
+
+RailsCto/MinitestSubject:
+  Enabled: true
