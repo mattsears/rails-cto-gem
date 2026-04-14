@@ -43,7 +43,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency "lint_roller", "~> 1.1"
   spec.add_dependency "rubocop", ">= 1.72"
   spec.add_dependency "rubocop-minitest", "~> 0.35"
-  spec.add_dependency "rubocop-rails", "~> 2.24"
+  # rubocop-rails is intentionally NOT a hard dependency. It pulls activesupport
+  # (and transitively connection_pool), which can conflict with host-app pins.
+  # Projects that want the Rails cops should add `rubocop-rails` to their own
+  # Gemfile alongside rails-cto.
 
   spec.add_dependency "flay", "~> 2.13"
   spec.add_dependency "flog", "~> 4.8"

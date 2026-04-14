@@ -9,8 +9,11 @@ Add to your Gemfile:
 ```ruby
 group :development, :test do
   gem "rails-cto"
+  gem "rubocop-rails", require: false  # optional companion — see note below
 end
 ```
+
+**Note on `rubocop-rails`:** it is *not* a hard dependency of `rails-cto` because it transitively pulls in `activesupport` (and `connection_pool`), which can conflict with host-app pins. The bundled `.rubocop.yml` still references `plugins: - rubocop-rails`, so add it to your own Gemfile if you want the Rails cops. Drop that line from your `.rubocop.yml` if you don't.
 
 Then:
 

@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.1] - Unreleased
+
+### Changed
+- **Breaking:** `rubocop-rails` is no longer a hard runtime dependency. It
+  pulled in `activesupport` (and transitively `connection_pool`), which could
+  force host apps into unwanted version upgrades. Projects that want the Rails
+  cops should add `rubocop-rails` to their own Gemfile. The bundled
+  `.rubocop.yml` still references it via `plugins: - rubocop-rails`.
+
 ## [0.2.0] - Unreleased
 
 ### Changed
