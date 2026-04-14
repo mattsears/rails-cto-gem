@@ -4,7 +4,7 @@ require "fileutils"
 require "thor"
 require_relative "reporter"
 
-module RailsCto
+module RailsCTO
   class Installer
     include Reporter
 
@@ -49,7 +49,7 @@ module RailsCto
 
     def copy_templates
       TEMPLATES.each do |source_rel, target_rel|
-        source = File.join(RailsCto.templates_root, source_rel)
+        source = File.join(RailsCTO.templates_root, source_rel)
         if File.exist?(source)
           write_file(target_rel, File.read(source))
         else
@@ -65,7 +65,7 @@ module RailsCto
       current = File.read(path)
       return skip_test_helper("SimpleCov already configured") if current.include?("SimpleCov.start")
 
-      snippet = File.read(File.join(RailsCto.templates_root, "simplecov_boot.rb"))
+      snippet = File.read(File.join(RailsCTO.templates_root, "simplecov_boot.rb"))
       File.write(path, "#{snippet}\n#{current}")
       @report.patched << "test/test_helper.rb (injected SimpleCov boot)"
     end
@@ -76,7 +76,7 @@ module RailsCto
 
     def patch_claude_md
       path = File.join(@root, "CLAUDE.md")
-      body = File.read(File.join(RailsCto.templates_root, "claude_md_snippet.md"))
+      body = File.read(File.join(RailsCTO.templates_root, "claude_md_snippet.md"))
       block = "#{CLAUDE_START_MARKER}\n#{body.chomp}\n#{CLAUDE_END_MARKER}\n"
       File.exist?(path) ? append_claude_block(path, block) : create_claude_md(path, block)
     end

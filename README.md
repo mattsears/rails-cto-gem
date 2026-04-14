@@ -42,7 +42,7 @@ Pass `--force` to overwrite existing files.
 | `rails-cto doctor`       | Report which configs are present, missing, or drifted from the bundled templates. Exits non-zero if anything is missing. |
 | `rails-cto version`      | Print the gem version.                                                                                                   |
 
-## Custom RuboCop cop: `RailsCto/MinitestSubject`
+## Custom RuboCop cop: `RailsCTO/MinitestSubject`
 
 The bundled `.rubocop.yml` auto-enables this cop. It enforces the mandatory Minitest::Spec `subject` rule from the plugin:
 
@@ -52,7 +52,7 @@ The bundled `.rubocop.yml` auto-enables this cop. It enforces the mandatory Mini
 Disable per file with a standard RuboCop comment:
 
 ```ruby
-# rubocop:disable RailsCto/MinitestSubject
+# rubocop:disable RailsCTO/MinitestSubject
 ```
 
 ## Links

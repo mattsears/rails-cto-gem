@@ -4,7 +4,7 @@ require_relative "lib/rails_cto/version"
 
 Gem::Specification.new do |spec|
   spec.name        = "rails-cto"
-  spec.version     = RailsCto::VERSION
+  spec.version     = RailsCTO::VERSION
   spec.authors     = ["Matt Sears"]
   spec.email       = ["matt@mattsears.com"]
 
@@ -24,6 +24,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"]    = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"]   = "#{spec.homepage}/blob/main/CHANGELOG.md"
+  spec.metadata["default_lint_roller_plugin"] = "RuboCop::RailsCTO::Plugin"
 
   spec.files = Dir[
     "lib/**/*",
@@ -39,7 +40,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "thor", "~> 1.3"
 
-  spec.add_dependency "rubocop", "~> 1.60"
+  spec.add_dependency "lint_roller", "~> 1.1"
+  spec.add_dependency "rubocop", ">= 1.72"
   spec.add_dependency "rubocop-minitest", "~> 0.35"
   spec.add_dependency "rubocop-rails", "~> 2.24"
 

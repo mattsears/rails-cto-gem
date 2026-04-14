@@ -4,7 +4,7 @@ require "thor"
 require_relative "installer"
 require_relative "reporter"
 
-module RailsCto
+module RailsCTO
   class Doctor
     include Reporter
 
@@ -34,7 +34,7 @@ module RailsCto
 
     def classify_template(source_rel, target_rel)
       target = File.join(@root, target_rel)
-      source = File.join(RailsCto.templates_root, source_rel)
+      source = File.join(RailsCTO.templates_root, source_rel)
 
       if !File.exist?(target)
         @missing << target_rel

@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module RailsCto
-  VERSION = "0.1.0"
+module RailsCTO
+  VERSION = "0.2.0"
 end

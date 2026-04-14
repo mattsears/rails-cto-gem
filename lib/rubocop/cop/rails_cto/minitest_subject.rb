@@ -2,7 +2,7 @@
 
 module RuboCop
   module Cop
-    module RailsCto
+    module RailsCTO
       # Enforces the mandatory Minitest::Spec `subject` convention from the
       # rails-cto plugin's rails-cto-minitest skill:
       #

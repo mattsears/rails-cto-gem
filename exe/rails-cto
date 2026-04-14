@@ -3,4 +3,4 @@
 
 require "rails_cto/cli"
 
-RailsCto::CLI.start(ARGV)
+RailsCTO::CLI.start(ARGV)

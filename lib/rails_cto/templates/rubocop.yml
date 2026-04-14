@@ -2,7 +2,7 @@
 # .rubocop.yml — installed by rails-cto
 # https://github.com/mattsears/rails-cto-gem
 
-require:
+plugins:
   - rubocop-rails
   - rubocop-minitest
   - rails-cto
@@ -63,5 +63,5 @@ Rails:
 Minitest:
   Enabled: true
 
-RailsCto/MinitestSubject:
+RailsCTO/MinitestSubject:
   Enabled: true

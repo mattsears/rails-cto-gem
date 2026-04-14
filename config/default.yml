@@ -1,5 +1,5 @@
 ---
-RailsCto/MinitestSubject:
+RailsCTO/MinitestSubject:
   Description: >-
     Enforces the Minitest::Spec `subject` convention from the rails-cto plugin.
     Every test class must define `subject` exactly once at the top level, and

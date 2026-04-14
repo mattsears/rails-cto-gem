@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RailsCto
+module RailsCTO
   module Reporter
     private
 

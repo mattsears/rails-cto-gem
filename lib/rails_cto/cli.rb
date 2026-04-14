@@ -5,7 +5,7 @@ require_relative "../rails_cto"
 require_relative "installer"
 require_relative "doctor"
 
-module RailsCto
+module RailsCTO
   class CLI < Thor
     package_name "rails-cto"
 
@@ -41,7 +41,7 @@ module RailsCto
 
     desc "version", "Print the rails-cto gem version"
     def version
-      say "rails-cto #{RailsCto::VERSION}"
+      say "rails-cto #{RailsCTO::VERSION}"
     end
 
     map %w[--version -v] => :version

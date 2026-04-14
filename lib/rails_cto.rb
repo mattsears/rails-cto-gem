@@ -2,7 +2,7 @@
 
 require_relative "rails_cto/version"
 
-module RailsCto
+module RailsCTO
   autoload :CLI,       "rails_cto/cli"
   autoload :Installer, "rails_cto/installer"
   autoload :Doctor,    "rails_cto/doctor"
