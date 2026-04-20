@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.1] - Unreleased
+## [0.2.1] - 2026-04-20
 
 ### Changed
 - **Breaking:** `rubocop-rails` is no longer a hard runtime dependency. It
@@ -8,6 +8,11 @@
   force host apps into unwanted version upgrades. Projects that want the Rails
   cops should add `rubocop-rails` to their own Gemfile. The bundled
   `.rubocop.yml` still references it via `plugins: - rubocop-rails`.
+- Loosened runtime dependency version constraints from `~>` pins to
+  `>= current, < next-major` ranges across `thor`, `lint_roller`,
+  `rubocop-minitest`, `flay`, `flog`, `reek`, `brakeman`, `bundler-audit`,
+  `simplecov`, `simplecov_json_formatter`, and `herb`. Reduces version
+  conflicts with host-app Gemfiles.
 
 ## [0.2.0] - Unreleased
 

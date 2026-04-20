@@ -38,25 +38,25 @@ Gem::Specification.new do |spec|
   spec.executables = ["rails-cto"]
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "thor", "~> 1.3"
+  spec.add_dependency "thor", ">= 1.3", "< 2"
 
-  spec.add_dependency "lint_roller", "~> 1.1"
+  spec.add_dependency "lint_roller", ">= 1.1", "< 2"
   spec.add_dependency "rubocop", ">= 1.72"
-  spec.add_dependency "rubocop-minitest", "~> 0.35"
+  spec.add_dependency "rubocop-minitest", ">= 0.35", "< 2"
   # rubocop-rails is intentionally NOT a hard dependency. It pulls activesupport
   # (and transitively connection_pool), which can conflict with host-app pins.
   # Projects that want the Rails cops should add `rubocop-rails` to their own
   # Gemfile alongside rails-cto.
 
-  spec.add_dependency "flay", "~> 2.13"
-  spec.add_dependency "flog", "~> 4.8"
-  spec.add_dependency "reek", "~> 6.3"
+  spec.add_dependency "flay", ">= 2.13", "< 4"
+  spec.add_dependency "flog", ">= 4.8", "< 6"
+  spec.add_dependency "reek", ">= 6.3", "< 8"
 
-  spec.add_dependency "brakeman", "~> 7.0"
-  spec.add_dependency "bundler-audit", "~> 0.9"
+  spec.add_dependency "brakeman", ">= 7.0", "< 9"
+  spec.add_dependency "bundler-audit", ">= 0.9", "< 2"
 
-  spec.add_dependency "simplecov", "~> 0.22"
-  spec.add_dependency "simplecov_json_formatter", "~> 0.1"
+  spec.add_dependency "simplecov", ">= 0.22", "< 2"
+  spec.add_dependency "simplecov_json_formatter", ">= 0.1", "< 2"
 
-  spec.add_dependency "herb", "~> 0.5"
+  spec.add_dependency "herb", ">= 0.5", "< 2"
 end
